@@ -34,9 +34,16 @@ with st.form('myform'):
 		'Gender':gender,
 		'Data of Birth': dob,
 		'Designation':role
-
 		}
 		st.json(details)
+		data = {
+			'Company': ['Google', 'Google', 'Apple', 'Apple'],
+			'Product': ['Pixel', 'Nest', 'iPhone', 'iPad'],
+			'Sales': [100, 50, 200, 150]
+		}
+
+		df = pd.DataFrame(data)
+		df.to_csv('data.csv')
 
 
 
